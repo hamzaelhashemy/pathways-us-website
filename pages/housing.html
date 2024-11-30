@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Guide - Pathway to the USA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                Pathway to the USA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="visa.html">
+                            <i class="fas fa-passport me-2"></i>Visa & Immigration
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="housing.html">
+                            <i class="fas fa-home me-2"></i>Housing
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="employment.html">
+                            <i class="fas fa-briefcase me-2"></i>Employment
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="education.html">
+                            <i class="fas fa-graduation-cap me-2"></i>Education
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="healthcare.html">
+                            <i class="fas fa-hospital me-2"></i>Healthcare
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="culture.html">
+                            <i class="fas fa-globe me-2"></i>Cultural Integration
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-2"></i>Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section housing-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 text-white fw-bold">Housing Guide</h1>
+                    <p class="lead text-white mb-4">Finding your home in the United States</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Housing Options -->
+        <section class="mb-5">
+            <h2 class="mb-4 section-title"><i class="fas fa-building me-2"></i>Housing Options</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body">
+                            <div class="icon-circle mb-3">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3 class="card-title h5">Apartments</h3>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Studio to 3+ Bedrooms</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Flexible Lease Terms</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Amenities Available</li>
+                            </ul>
+                            <a href="#" class="btn btn-gradient mt-3">Find Apartments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body">
+                            <div class="icon-circle mb-3">
+                                <i class="fas fa-house-user"></i>
+                            </div>
+                            <h3 class="card-title h5">Houses</h3>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Single Family Homes</li>
+                                <li><i class="fas fa-check text-success me-2"></i>More Space & Privacy</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Long-term Options</li>
+                            </ul>
+                            <a href="#" class="btn btn-gradient mt-3">Browse Houses</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body">
+                            <div class="icon-circle mb-3">
+                                <i class="fas fa-people-arrows"></i>
+                            </div>
+                            <h3 class="card-title h5">Shared Living</h3>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Room Rentals</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Cost-Effective</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Social Environment</li>
+                            </ul>
+                            <a href="#" class="btn btn-gradient mt-3">Find Roommates</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rental Process -->
+        <section class="mb-5">
+            <h2 class="mb-4 section-title"><i class="fas fa-tasks me-2"></i>Rental Process Guide</h2>
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="accordion" id="rentalAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="fas fa-search me-2"></i>Search & Research
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#rentalAccordion">
+                                <div class="accordion-body">
+                                    <p>Research neighborhoods, compare prices, and create a shortlist of potential properties.</p>
+                                    <a href="https://www.apartments.com/blog/guide-to-choosing-a-neighborhood" target="_blank" class="btn btn-gradient btn-sm">Neighborhood Guide</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="fas fa-file-signature me-2"></i>Application Process
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#rentalAccordion">
+                                <div class="accordion-body">
+                                    <p>Learn about rental applications, credit checks, and required documentation.</p>
+                                    <a href="https://www.rent.com/blog/how-to-apply-for-an-apartment/" target="_blank" class="btn btn-gradient btn-sm">Application Guide</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="fas fa-key me-2"></i>Move-In Process
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#rentalAccordion">
+                                <div class="accordion-body">
+                                    <p>Understand lease signing, security deposits, and move-in procedures.</p>
+                                    <a href="https://www.apartmentlist.com/renter-life/moving-into-a-new-apartment" target="_blank" class="btn btn-gradient btn-sm">Move-In Checklist</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="mb-5">
+            <h2 class="mb-4 section-title"><i class="fas fa-info-circle me-2"></i>Helpful Resources</h2>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card feature-card">
+                        <div class="card-body">
+                            <h3 class="h5 mb-4">Essential Information</h3>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="resource-item">
+                                        <i class="fas fa-shield-alt fa-2x mb-3 text-primary"></i>
+                                        <h4 class="h6">Tenant Rights</h4>
+                                        <p>Learn about your rights and protections as a tenant in the US.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="resource-item">
+                                        <i class="fas fa-calculator fa-2x mb-3 text-primary"></i>
+                                        <h4 class="h6">Cost Calculator</h4>
+                                        <p>Estimate your total housing costs including utilities and insurance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card feature-card bg-light">
+                        <div class="card-body">
+                            <h3 class="h5 mb-4 text-dark">Need Help?</h3>
+                            <p class="text-dark">Connect with housing advisors who can guide you through the process.</p>
+                            <a href="contact.html" class="btn btn-primary mt-3">Get Assistance</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5>Pathway to the USA</h5>
+                    <p>Supporting Egyptian immigrants on their journey to success in the United States.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
