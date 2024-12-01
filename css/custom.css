@@ -403,3 +403,26 @@ footer {
         background-attachment: scroll;
     }
 }
+
+.team-card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card .card-body {
+    padding: 2rem 1.5rem;
+}
+
+.team-card a {
+    color: var(--bs-primary);
+    text-decoration: none;
+}
+
+.team-card a:hover {
+    text-decoration: underline;
+}
