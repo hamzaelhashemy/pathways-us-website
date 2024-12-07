@@ -49,6 +49,15 @@ body {
     color: #333;
     cursor: pointer;
 }
+    /* Remove Google Translate Banner */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    top: 0 !important; /* Adjust body to avoid layout shift */
+}
+
 .language-selector select:focus {
     outline: none;
     border-color: #007bff;
