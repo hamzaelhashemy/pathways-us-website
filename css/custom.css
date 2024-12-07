@@ -97,6 +97,29 @@ body {
     position: relative;
     z-index: 2;
 }
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: #f8f9fa; /* Matches Bootstrap light background */
+    color: #000;
+    border: 1px solid #dee2e6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.goog-te-gadget-simple a {
+    color: #007bff; /* Matches Bootstrap primary color */
+    text-decoration: none;
+}
+
+.goog-te-gadget-simple a:hover {
+    text-decoration: underline;
+}
+
 
 /* Hero Background Images */
 .main-hero { background-image: url('../images/main-hero.jpg'); }
