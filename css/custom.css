@@ -1,14 +1,37 @@
+/* Root Variables */
 :root {
-    /* Purple Luxury Color Palette */
-    --primary-color: #3e1d4d;      /* Deep purple */
-    --secondary-color: #632e74;    /* Rich purple */
-    --accent-color: #A56ABD;       /* Medium purple */
-    --background-light: #e9e0ef;   /* Light purple */
-    --background-white: #f8f0fd;   /* Very light purple */
-    --text-color: #49225B;         /* Deep purple for text */
-    --text-muted: #6E3482;         /* Rich purple for muted text */
+    /* Primary Colors */
+    --primary-color: #2c1654;
+    --secondary-color: #4a2178;
+    --accent-color: #8246af;
+    --accent-light: #b87ce3;
+    
+    /* Background Colors */
+    --background-light: #f8f5ff;   /* Very light purple background */
+    --background-white: #ffffff;    /* Pure white */
+    
+    /* Text Colors */
+    --text-color: #2c1654;         /* Dark purple text */
+    --text-muted: #666276;         /* Muted text */
+    
+    /* Link Colors */
+    --link-color: #5e35b1;
+    --link-hover: #9c27b0;
+    
+    /* Status Colors */
+    --success-color: #4caf50;      /* Green */
+    --warning-color: #ff9800;      /* Orange */
+    --info-color: #2196f3;         /* Blue */
+    --error-color: #f44336;        /* Red */
+    
+    /* Card Colors */
+    --card-gradient-start: #ffffff;
+    --card-gradient-end: #f8f5ff;
+    --card-border: rgba(130, 70, 175, 0.2);
+    --card-shadow: rgba(130, 70, 175, 0.15);
 }
 
+/* Base Styles */
 body {
     background-color: var(--background-light);
     color: var(--text-color);
@@ -18,23 +41,7 @@ body {
     scrollbar-color: var(--primary-color) var(--background-light);
 }
 
-/* Custom Scrollbar */
-body::-webkit-scrollbar {
-    width: 8px;
-}
-
-
-body::-webkit-scrollbar-track {
-    background: var(--background-light);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color);
-    border-radius: 20px;
-    border: 2px solid var(--background-light);
-}
-
-/* Navigation Styling */
+/* Navigation */
 .navbar {
     background-color: var(--background-white) !important;
     box-shadow: 0 2px 4px rgba(73, 34, 91, 0.1);
@@ -61,7 +68,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
 }
 
-/* Hero Section Styling */
+/* Hero Section */
 .hero-section {
     background-size: cover;
     background-position: center;
@@ -81,8 +88,8 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay with 40% opacity */
-    filter: brightness(0.7); /* Reduce brightness to 70% */
+    background-color: rgba(0, 0, 0, 0.4);
+    filter: brightness(0.7);
     z-index: 1;
 }
 
@@ -91,57 +98,21 @@ body::-webkit-scrollbar-thumb {
     z-index: 2;
 }
 
-.hero-section h1 {
-    color: var(--text-color);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 2;
-}
+/* Hero Background Images */
+.main-hero { background-image: url('../images/main-hero.jpg'); }
+.housing-hero { background-image: url('../images/housing-hero.jpg'); }
+.culture-hero { background-image: url('../images/culture-hero.jpg'); }
+.healthcare-hero { background-image: url('../images/healthcare-hero.jpg'); }
+.employment-hero { background-image: url('../images/employment-hero.jpg'); }
+.education-hero { background-image: url('../images/education-hero.jpg'); }
+.visa-hero { background-image: url('../images/visa-hero.jpg'); }
+.contact-hero { background-image: url('../images/contact-hero.jpg'); }
 
-.hero-section p {
-    color: var(--text-muted);
-    position: relative;
-    z-index: 2;
-}
-
-.main-hero {
-    background-image: url('../images/main-hero.jpg');
-}
-
-.housing-hero {
-    background-image: url('../images/housing-hero.jpg');
-}
-
-.culture-hero {
-    background-image: url('../images/culture-hero.jpg');
-}
-
-.healthcare-hero {
-    background-image: url('../images/healthcare-hero.jpg');
-}
-
-.employment-hero {
-    background-image: url('../images/employment-hero.jpg');
-}
-
-.education-hero {
-    background-image: url('../images/education-hero.jpg');
-}
-
-.visa-hero {
-    background-image: url('../images/visa-hero.jpg');
-}
-
-.contact-hero {
-    background-image: url('../images/contact-hero.jpg');
-}
-
-/* Card Styling */
+/* Cards */
 .card {
-    background: linear-gradient(145deg, var(--background-white), var(--background-light));
-    border: 1px solid rgba(73, 34, 91, 0.1);
-    color: var(--text-color);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: linear-gradient(145deg, var(--card-gradient-start), var(--card-gradient-end));
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 12px var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -150,50 +121,30 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.feature-card {
-    background: linear-gradient(145deg, var(--background-white), var(--background-light));
-    border-radius: 15px;
-    overflow: hidden;
-}
-
+/* Buttons */
 .btn-primary {
-    all: unset;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
     color: white;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(74, 33, 120, 0.25);
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    color: white;
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 33, 120, 0.35);
 }
 
-/* Ensure feature card buttons follow the same styling */
-.card.feature-card .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white;
-}
-
-.card.feature-card .btn-primary:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
     background-color: var(--background-white) !important;
     color: var(--text-color);
     border-top: 1px solid rgba(0,0,0,0.05);
 }
 
-/* Form Styling */
+/* Forms */
 .form-control {
     background-color: var(--background-white);
     border: 1px solid rgba(0,0,0,0.1);
@@ -205,206 +156,15 @@ footer {
     box-shadow: 0 0 0 0.2rem rgba(165, 106, 189, 0.25);
 }
 
-/* Utility Classes */
-.section-title {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 10px;
+/* Icons */
+.text-primary,
+.feature-card i,
+.card i,
+.resource-item i {
+    color: var(--accent-color) !important;
 }
 
-.icon-circle {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: var(--primary-color);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-}
-
-.section-image {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Additional Futuristic Design Elements */
-* {
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-
-/* Glitch Text Effect */
-.glitch-text {
-    position: relative;
-    color: var(--text-color);
-}
-
-.glitch-text::before,
-.glitch-text::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-}
-
-.glitch-text::before {
-    left: 2px;
-    text-shadow: -2px 0 red;
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-
-.glitch-text::after {
-    left: -2px;
-    text-shadow: -2px 0 blue;
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim2 5s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim {
-    0% {
-        clip: rect(61px, 9999px, 52px, 0);
-        transform: skew(0.87deg);
-    }
-    5% {
-        clip: rect(33px, 9999px, 14px, 0);
-        transform: skew(0.29deg);
-    }
-    10% {
-        clip: rect(85px, 9999px, 66px, 0);
-        transform: skew(0.91deg);
-    }
-    15% {
-        clip: rect(36px, 9999px, 87px, 0);
-        transform: skew(0.13deg);
-    }
-    20% {
-        clip: rect(29px, 9999px, 36px, 0);
-        transform: skew(1.04deg);
-    }
-    25% {
-        clip: rect(11px, 9999px, 54px, 0);
-        transform: skew(0.45deg);
-    }
-}
-
-@keyframes glitch-anim2 {
-    0% {
-        clip: rect(29px, 9999px, 61px, 0);
-        transform: skew(0.37deg);
-    }
-    5% {
-        clip: rect(73px, 9999px, 33px, 0);
-        transform: skew(0.89deg);
-    }
-    10% {
-        clip: rect(43px, 9999px, 17px, 0);
-        transform: skew(1.02deg);
-    }
-    15% {
-        clip: rect(11px, 9999px, 89px, 0);
-        transform: skew(0.76deg);
-    }
-    20% {
-        clip: rect(73px, 9999px, 24px, 0);
-        transform: skew(0.56deg);
-    }
-    25% {
-        clip: rect(61px, 9999px, 36px, 0);
-        transform: skew(1.01deg);
-    }
-}
-
-/* Futuristic Hover Effects */
-.futuristic-hover {
-    position: relative;
-    overflow: hidden;
-}
-
-.futuristic-hover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg, 
-        transparent, 
-        rgba(255,255,255,0.1), 
-        transparent
-    );
-    transition: all 0.6s;
-}
-
-.futuristic-hover:hover::before {
-    left: 100%;
-}
-
-/* Neon Glow Effect */
-.neon-glow {
-    text-shadow: 
-        0 0 5px var(--primary-color),
-        0 0 10px var(--primary-color),
-        0 0 15px var(--primary-color),
-        0 0 20px var(--accent-color);
-}
-
-/* Animated Gradient Background */
-.animated-gradient {
-    background: linear-gradient(-45deg, 
-        var(--background-light), 
-        var(--primary-color), 
-        var(--accent-color), 
-        var(--background-white)
-    );
-    background-size: 400% 400%;
-    animation: gradient-animation 15s ease infinite;
-}
-
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Futuristic Input Styles */
-.form-control {
-    background-color: var(--background-white);
-    border: 1px solid rgba(0,0,0,0.1);
-    color: var(--text-color);
-    transition: all 0.3s ease;
-}
-
-.form-control:focus {
-    background-color: var(--background-white);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
-}
-
-/* Glassmorphism Effect */
-.glassmorphism {
-    background: rgba(22, 33, 62, 0.4);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    border-radius: 10px;
-}
-
+/* Media Queries */
 @media (max-width: 991.98px) {
     .hero-section {
         min-height: 400px;
@@ -421,384 +181,4 @@ footer {
     .hero-section {
         background-attachment: scroll;
     }
-}
-
-.team-card {
-    transition: transform 0.3s ease;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
-}
-
-.team-card .card-body {
-    padding: 2rem 1.5rem;
-}
-
-.team-card a {
-    color: var(--bs-primary);
-    text-decoration: none;
-}
-
-.team-card a:hover {
-    text-decoration: underline;
-}
-
-/* Comprehensive Sections Styling */
-.detailed-healthcare-info,
-.detailed-housing-info,
-.detailed-visa-info,
-.detailed-employment-info,
-.detailed-education-info,
-.detailed-culture-info {
-    background: linear-gradient(145deg, var(--background-white), var(--background-light))!important;
-    padding: 3rem 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(73, 34, 91, 0.1);
-}
-
-/* Cards within comprehensive sections */
-.detailed-healthcare-info .card,
-.detailed-housing-info .card,
-.detailed-visa-info .card,
-.detailed-employment-info .card,
-.detailed-education-info .card,
-.detailed-culture-info .card {
-    background: var(--background-white);
-    border: none;
-    box-shadow: 0 4px 6px rgba(73, 34, 91, 0.1);
-}
-
-/* Card hover effects */
-.detailed-healthcare-info .card:hover,
-.detailed-housing-info .card:hover,
-.detailed-visa-info .card:hover,
-.detailed-employment-info .card:hover,
-.detailed-education-info .card:hover,
-.detailed-culture-info .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(73, 34, 91, 0.15);
-}
-
-/* Section headings */
-.detailed-healthcare-info h2,
-.detailed-housing-info h2,
-.detailed-visa-info h2,
-.detailed-employment-info h2,
-.detailed-education-info h2,
-.detailed-culture-info h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    font-weight: 600;
-}
-
-/* Card titles */
-.detailed-healthcare-info .card-title,
-.detailed-housing-info .card-title,
-.detailed-visa-info .card-title,
-.detailed-employment-info .card-title,
-.detailed-education-info .card-title,
-.detailed-culture-info .card-title {
-    color: var(--secondary-color);
-    font-weight: 500;
-}
-
-/* Links within cards */
-.detailed-healthcare-info .card a,
-.detailed-housing-info .card a,
-.detailed-visa-info .card a,
-.detailed-employment-info .card a,
-.detailed-education-info .card a,
-.detailed-culture-info .card a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.detailed-healthcare-info .card a:hover,
-.detailed-housing-info .card a:hover,
-.detailed-visa-info .card a:hover,
-.detailed-employment-info .card a:hover,
-.detailed-education-info .card a:hover,
-.detailed-culture-info .card a:hover {
-    color: var(--secondary-color);
-}
-/* Feature cards and icons styling */
-.feature-card .text-primary,
-.feature-card .fa-2x,
-.feature-card .fas,
-.feature-card .far,
-.feature-card i {
-    color: var(--accent-color) !important;
-}
-
-.card.feature-card .text-primary,
-.card.feature-card .fa-2x,
-.card.feature-card .fas,
-.card.feature-card .far,
-.card.feature-card i {
-    color: var(--accent-color) !important;
-}
-/* Icon colors for visa info section */
-.detailed-visa-info .text-primary,
-.detailed-visa-info .fa-2x,
-.detailed-visa-info .fas,
-.detailed-visa-info .far {
-    color: var(--accent-color) !important;
-}
-
-.detailed-visa-info .card-title i {
-    color: var(--accent-color) !important;
-}
-
-.detailed-visa-info .resource-item i {
-    color: var(--accent-color) !important;
-}
-/* Icon colors for all detailed info sections */
-.detailed-housing-info .text-primary,
-.detailed-housing-info .fa-2x,
-.detailed-housing-info .fas,
-.detailed-housing-info .far,
-.detailed-healthcare-info .text-primary,
-.detailed-healthcare-info .fa-2x,
-.detailed-healthcare-info .fas,
-.detailed-healthcare-info .far,
-.detailed-education-info .text-primary,
-.detailed-education-info .fa-2x,
-.detailed-education-info .fas,
-.detailed-education-info .far,
-.detailed-employment-info .text-primary,
-.detailed-employment-info .fa-2x,
-.detailed-employment-info .fas,
-.detailed-employment-info .far,
-.detailed-culture-info .text-primary,
-.detailed-culture-info .fa-2x,
-.detailed-culture-info .fas,
-.detailed-culture-info .far,
-.detailed-visa-info .text-primary,
-.detailed-visa-info .fa-2x,
-.detailed-visa-info .fas,
-.detailed-visa-info .far {
-    color: var(--accent-color) !important;
-}
-
-/* Ensure all resource items and card icons follow the scheme */
-.resource-item i,
-.card i,
-.card-title i {
-    color: var(--accent-color) !important;
-}
-
-/* Text primary override for all sections */
-.text-primary {
-    color: var(--accent-color) !important;
-}
-/* Ensure icons in resource items also follow the scheme */
-.resource-item .fa-2x,
-.resource-item i {
-    color: var(--accent-color) !important;
-}
-
-/* Who We Are Section */
-.who-we-are{
-    background: linear-gradient(145deg, var(--background-white), var(--background-light));
-    padding: 4rem 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(73, 34, 91, 0.1);
-}
-
-.who-we-are h2 {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.who-we-are .card {
-    border: none;
-    background: var(--background-white);
-    box-shadow: 0 4px 6px rgba(73, 34, 91, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.who-we-are .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(73, 34, 91, 0.15);
-}
-
-.who-we-are .card h4 {
-    color: var(--secondary-color);
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-
-.who-we-are .card p {
-    color: var(--text-color);
-}
-
-.who-we-are .text-primary {
-    color: var(--accent-color) !important;
-}
-
-.who-we-are .fa-2x {
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-.why-choose-us {
-    background: linear-gradient(145deg, var(--background-white), var(--background-light));
-    padding: 4rem 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(73, 34, 91, 0.1);
-}
-
-.why-choose-us h2 {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.why-choose-us .card {
-    border: none;
-    background: var(--background-white);
-    box-shadow: 0 4px 6px rgba(73, 34, 91, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-choose-us .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(73, 34, 91, 0.15);
-}
-
-.why-choose-us .card h4 {
-    color: var(--secondary-color);
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-
-.why-choose-us .card p {
-    color: var(--text-color);
-}
-
-.why-choose-us .text-primary {
-    color: var(--accent-color) !important;
-}
-
-.why-choose-us .fa-2x {
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-
-.why-choose-us .card p {
-    color: var(--text-color);
-}
-
-.why-choose-us .text-primary {
-    color: var(--accent-color) !important;
-}
-
-.why-choose-us .fa-2x {
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-/* Healthcare specific icon colors */
-.detailed-healthcare-info i.fas,
-.detailed-healthcare-info i.far,
-.detailed-healthcare-info i.fa,
-.detailed-healthcare-info i.fa-2x,
-.detailed-healthcare-info .text-primary,
-.detailed-healthcare-info .text-danger,
-.detailed-healthcare-info .card i,
-.detailed-healthcare-info .resource-item i {
-    color: var(--accent-color) !important;
-}
-
-/* Target any bootstrap text colors that might override */
-.detailed-healthcare-info .text-danger,
-.detailed-healthcare-info .text-primary,
-.detailed-healthcare-info .text-success {
-    color: var(--accent-color) !important;
-}
-
-/* Ensure resource items in healthcare section follow the scheme */
-.detailed-healthcare-info .resource-item .fa-2x,
-.detailed-healthcare-info .resource-item .fas,
-.detailed-healthcare-info .resource-item .far {
-    color: var(--accent-color) !important;
-}
-/* Healthcare specific icons */
-.detailed-healthcare-info .fas.fa-globe,
-.detailed-healthcare-info .fas.fa-file-invoice-dollar,
-.detailed-healthcare-info .fas.fa-language {
-    color: var(--accent-color) !important;
-}
-
-/* Ensure text-primary class is overridden in healthcare section */
-.detailed-healthcare-info .text-primary {
-    color: var(--accent-color) !important;
-}
-
-/* Healthcare specific overrides - check if these are causing conflicts */
-.detailed-healthcare-info .btn-primary {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
-}
-
-/* Add this to ensure healthcare buttons match other pages */
-.detailed-healthcare-info .card.feature-card .btn-primary,
-.detailed-healthcare-info .btn-primary {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
-    color: white !important;
-}
-
-.detailed-healthcare-info .card.feature-card .btn-primary:hover,
-.detailed-healthcare-info .btn-primary:hover {
-    background-color: var(--secondary-color) !important;
-    border-color: var(--secondary-color) !important;
-}
-
-/* Override any Bootstrap healthcare-specific styles */
-.detailed-healthcare-info .text-primary,
-.detailed-healthcare-info .btn-primary {
-    color: white !important;
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
-}
-
-r
-
-/* More specific selectors to override default link colors */
-.detailed-visa-info a:not(.btn),
-.visa-resources a:not(.btn),
-.card-body a:not(.btn),
-main a:not(.btn) {
-    color: var(--secondary-colorr) !important;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.detailed-visa-info a:not(.btn):hover,
-.visa-resources a:not(.btn):hover,
-.card-body a:not(.btn):hover,
-main a:not(.btn):hover {
-    color: var(--secondary-color) !important;
-    text-decoration: underline;
-}
-
-.team-members {
-    padding: 20px 0;
-}
-
-.team-card {
-    background: var(--background-white);
-    border: 1px solid rgba(73, 34, 91, 0.1);
-    transition: transform 0.2s ease;
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
 }
