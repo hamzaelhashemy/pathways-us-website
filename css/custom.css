@@ -62,12 +62,12 @@ body {
     border-radius: 5px;
     border: 1px solid #dee2e6;
     background-color: #f8f9fa;
-    color: #333;
+    color: #2c1654;
     cursor: pointer;
 }
 .language-selector select:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: #2c1654;
 }
 
 /* Navigation */
