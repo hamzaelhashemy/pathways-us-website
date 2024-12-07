@@ -36,4 +36,4 @@ To provide clear, actionable, and supportive information that helps Egyptian imm
 Contributions, suggestions, and improvements are welcome. Please open an issue or submit a pull request.
 
 ## License
-© 2023 Pathway to the USA. All rights reserved.
+© 2024 Pathway to the USA. All rights reserved.
