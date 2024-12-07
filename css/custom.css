@@ -97,32 +97,7 @@ body {
     position: relative;
     z-index: 2;
 }
-.goog-te-gadget {
-    font-size: 16px !important;
-    font-family: 'Arial', sans-serif !important;
-    color: #333 !important;
-}
 
-.goog-te-gadget-simple {
-    background-color: #f8f9fa !important;
-    border: 1px solid #dee2e6 !important;
-    border-radius: 5px !important;
-    padding: 5px 10px !important;
-    cursor: pointer !important;
-    display: inline-block !important;
-}
-
-.goog-te-gadget-simple a {
-    color: #007bff !important;
-    text-decoration: none !important;
-}
-
-.goog-te-gadget-simple a:hover {
-    text-decoration: underline !important;
-}
-.goog-te-banner-frame {
-    display: none !important;
-}
 body {
     top: 0px !important;
 }
