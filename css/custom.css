@@ -39,6 +39,44 @@ body {
     line-height: 1.6;
     scrollbar-width: thin;
     scrollbar-color: var(--primary-color) var(--background-light);
+    .language-selector select {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+}
+    /* Remove Google Translate Banner */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    top: 0 !important; /* Adjust body to avoid layout shift */
+}
+
+.language-selector select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+}
+.language-selector select {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    color: #2c1654;
+    cursor: pointer;
+}
+.language-selector select:focus {
+    outline: none;
+    border-color: #2c1654;
 }
 
 /* Navigation */
@@ -97,6 +135,12 @@ body {
     position: relative;
     z-index: 2;
 }
+
+body {
+    top: 0px !important;
+}
+
+
 
 /* Hero Background Images */
 .main-hero { background-image: url('../images/main-hero.jpg'); }
