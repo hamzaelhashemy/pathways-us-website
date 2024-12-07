@@ -1,12 +1,12 @@
 :root {
-    /* Light Mode Color Palette */
-    --primary-color: #3498db;      /* Bright blue */
-    --secondary-color: #2ecc71;    /* Vibrant green */
-    --accent-color: #2980b9;       /* Deeper blue */
-    --background-light: #f4f6f7;   /* Light gray-blue */
-    --background-white: #ffffff;   /* Pure white */
-    --text-color: #2c3e50;         /* Dark blue-gray */
-    --text-muted: #7f8c8d;         /* Soft gray */
+    /* Purple Luxury Color Palette */
+    --primary-color: #3e1d4d;      /* Deep purple */
+    --secondary-color: #632e74;    /* Rich purple */
+    --accent-color: #A56ABD;       /* Medium purple */
+    --background-light: #e9e0ef;   /* Light purple */
+    --background-white: #f8f0fd;   /* Very light purple */
+    --text-color: #49225B;         /* Deep purple for text */
+    --text-muted: #6E3482;         /* Rich purple for muted text */
 }
 
 body {
@@ -23,6 +23,7 @@ body::-webkit-scrollbar {
     width: 8px;
 }
 
+
 body::-webkit-scrollbar-track {
     background: var(--background-light);
 }
@@ -36,7 +37,7 @@ body::-webkit-scrollbar-thumb {
 /* Navigation Styling */
 .navbar {
     background-color: var(--background-white) !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(73, 34, 91, 0.1);
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
@@ -51,12 +52,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-link:hover {
-    color: var(--primary-color) !important;
+    color: var(--accent-color) !important;
     transform: scale(1.05);
 }
 
 .nav-link.active {
-    color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
     font-weight: bold;
 }
 
@@ -137,8 +138,8 @@ body::-webkit-scrollbar-thumb {
 
 /* Card Styling */
 .card {
-    background-color: var(--background-white);
-    border: 1px solid rgba(0,0,0,0.1);
+    background: linear-gradient(145deg, var(--background-white), var(--background-light));
+    border: 1px solid rgba(73, 34, 91, 0.1);
     color: var(--text-color);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -150,21 +151,39 @@ body::-webkit-scrollbar-thumb {
 }
 
 .feature-card {
-    background: linear-gradient(145deg, var(--background-light), var(--background-white));
+    background: linear-gradient(145deg, var(--background-white), var(--background-light));
     border-radius: 15px;
     overflow: hidden;
 }
 
 .btn-primary {
+    all: unset;
+    display: inline-block;
+    padding: 0.5rem 1rem;
     background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    transition: all 0.3s ease;
+    border: 1px solid var(--primary-color);
+    color: white;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .btn-primary:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    transform: translateY(-3px);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+/* Ensure feature card buttons follow the same styling */
+.card.feature-card .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.card.feature-card .btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 /* Footer Styling */
@@ -182,8 +201,8 @@ footer {
 }
 
 .form-control:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(165, 106, 189, 0.25);
 }
 
 /* Utility Classes */
@@ -425,4 +444,361 @@ footer {
 
 .team-card a:hover {
     text-decoration: underline;
+}
+
+/* Comprehensive Sections Styling */
+.detailed-healthcare-info,
+.detailed-housing-info,
+.detailed-visa-info,
+.detailed-employment-info,
+.detailed-education-info,
+.detailed-culture-info {
+    background: linear-gradient(145deg, var(--background-white), var(--background-light))!important;
+    padding: 3rem 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(73, 34, 91, 0.1);
+}
+
+/* Cards within comprehensive sections */
+.detailed-healthcare-info .card,
+.detailed-housing-info .card,
+.detailed-visa-info .card,
+.detailed-employment-info .card,
+.detailed-education-info .card,
+.detailed-culture-info .card {
+    background: var(--background-white);
+    border: none;
+    box-shadow: 0 4px 6px rgba(73, 34, 91, 0.1);
+}
+
+/* Card hover effects */
+.detailed-healthcare-info .card:hover,
+.detailed-housing-info .card:hover,
+.detailed-visa-info .card:hover,
+.detailed-employment-info .card:hover,
+.detailed-education-info .card:hover,
+.detailed-culture-info .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(73, 34, 91, 0.15);
+}
+
+/* Section headings */
+.detailed-healthcare-info h2,
+.detailed-housing-info h2,
+.detailed-visa-info h2,
+.detailed-employment-info h2,
+.detailed-education-info h2,
+.detailed-culture-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Card titles */
+.detailed-healthcare-info .card-title,
+.detailed-housing-info .card-title,
+.detailed-visa-info .card-title,
+.detailed-employment-info .card-title,
+.detailed-education-info .card-title,
+.detailed-culture-info .card-title {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Links within cards */
+.detailed-healthcare-info .card a,
+.detailed-housing-info .card a,
+.detailed-visa-info .card a,
+.detailed-employment-info .card a,
+.detailed-education-info .card a,
+.detailed-culture-info .card a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.detailed-healthcare-info .card a:hover,
+.detailed-housing-info .card a:hover,
+.detailed-visa-info .card a:hover,
+.detailed-employment-info .card a:hover,
+.detailed-education-info .card a:hover,
+.detailed-culture-info .card a:hover {
+    color: var(--secondary-color);
+}
+/* Feature cards and icons styling */
+.feature-card .text-primary,
+.feature-card .fa-2x,
+.feature-card .fas,
+.feature-card .far,
+.feature-card i {
+    color: var(--accent-color) !important;
+}
+
+.card.feature-card .text-primary,
+.card.feature-card .fa-2x,
+.card.feature-card .fas,
+.card.feature-card .far,
+.card.feature-card i {
+    color: var(--accent-color) !important;
+}
+/* Icon colors for visa info section */
+.detailed-visa-info .text-primary,
+.detailed-visa-info .fa-2x,
+.detailed-visa-info .fas,
+.detailed-visa-info .far {
+    color: var(--accent-color) !important;
+}
+
+.detailed-visa-info .card-title i {
+    color: var(--accent-color) !important;
+}
+
+.detailed-visa-info .resource-item i {
+    color: var(--accent-color) !important;
+}
+/* Icon colors for all detailed info sections */
+.detailed-housing-info .text-primary,
+.detailed-housing-info .fa-2x,
+.detailed-housing-info .fas,
+.detailed-housing-info .far,
+.detailed-healthcare-info .text-primary,
+.detailed-healthcare-info .fa-2x,
+.detailed-healthcare-info .fas,
+.detailed-healthcare-info .far,
+.detailed-education-info .text-primary,
+.detailed-education-info .fa-2x,
+.detailed-education-info .fas,
+.detailed-education-info .far,
+.detailed-employment-info .text-primary,
+.detailed-employment-info .fa-2x,
+.detailed-employment-info .fas,
+.detailed-employment-info .far,
+.detailed-culture-info .text-primary,
+.detailed-culture-info .fa-2x,
+.detailed-culture-info .fas,
+.detailed-culture-info .far,
+.detailed-visa-info .text-primary,
+.detailed-visa-info .fa-2x,
+.detailed-visa-info .fas,
+.detailed-visa-info .far {
+    color: var(--accent-color) !important;
+}
+
+/* Ensure all resource items and card icons follow the scheme */
+.resource-item i,
+.card i,
+.card-title i {
+    color: var(--accent-color) !important;
+}
+
+/* Text primary override for all sections */
+.text-primary {
+    color: var(--accent-color) !important;
+}
+/* Ensure icons in resource items also follow the scheme */
+.resource-item .fa-2x,
+.resource-item i {
+    color: var(--accent-color) !important;
+}
+
+/* Who We Are Section */
+.who-we-are{
+    background: linear-gradient(145deg, var(--background-white), var(--background-light));
+    padding: 4rem 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(73, 34, 91, 0.1);
+}
+
+.who-we-are h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.who-we-are .card {
+    border: none;
+    background: var(--background-white);
+    box-shadow: 0 4px 6px rgba(73, 34, 91, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.who-we-are .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(73, 34, 91, 0.15);
+}
+
+.who-we-are .card h4 {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.who-we-are .card p {
+    color: var(--text-color);
+}
+
+.who-we-are .text-primary {
+    color: var(--accent-color) !important;
+}
+
+.who-we-are .fa-2x {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.why-choose-us {
+    background: linear-gradient(145deg, var(--background-white), var(--background-light));
+    padding: 4rem 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(73, 34, 91, 0.1);
+}
+
+.why-choose-us h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.why-choose-us .card {
+    border: none;
+    background: var(--background-white);
+    box-shadow: 0 4px 6px rgba(73, 34, 91, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-us .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(73, 34, 91, 0.15);
+}
+
+.why-choose-us .card h4 {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.why-choose-us .card p {
+    color: var(--text-color);
+}
+
+.why-choose-us .text-primary {
+    color: var(--accent-color) !important;
+}
+
+.why-choose-us .fa-2x {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+
+.why-choose-us .card p {
+    color: var(--text-color);
+}
+
+.why-choose-us .text-primary {
+    color: var(--accent-color) !important;
+}
+
+.why-choose-us .fa-2x {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Healthcare specific icon colors */
+.detailed-healthcare-info i.fas,
+.detailed-healthcare-info i.far,
+.detailed-healthcare-info i.fa,
+.detailed-healthcare-info i.fa-2x,
+.detailed-healthcare-info .text-primary,
+.detailed-healthcare-info .text-danger,
+.detailed-healthcare-info .card i,
+.detailed-healthcare-info .resource-item i {
+    color: var(--accent-color) !important;
+}
+
+/* Target any bootstrap text colors that might override */
+.detailed-healthcare-info .text-danger,
+.detailed-healthcare-info .text-primary,
+.detailed-healthcare-info .text-success {
+    color: var(--accent-color) !important;
+}
+
+/* Ensure resource items in healthcare section follow the scheme */
+.detailed-healthcare-info .resource-item .fa-2x,
+.detailed-healthcare-info .resource-item .fas,
+.detailed-healthcare-info .resource-item .far {
+    color: var(--accent-color) !important;
+}
+/* Healthcare specific icons */
+.detailed-healthcare-info .fas.fa-globe,
+.detailed-healthcare-info .fas.fa-file-invoice-dollar,
+.detailed-healthcare-info .fas.fa-language {
+    color: var(--accent-color) !important;
+}
+
+/* Ensure text-primary class is overridden in healthcare section */
+.detailed-healthcare-info .text-primary {
+    color: var(--accent-color) !important;
+}
+
+/* Healthcare specific overrides - check if these are causing conflicts */
+.detailed-healthcare-info .btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Add this to ensure healthcare buttons match other pages */
+.detailed-healthcare-info .card.feature-card .btn-primary,
+.detailed-healthcare-info .btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.detailed-healthcare-info .card.feature-card .btn-primary:hover,
+.detailed-healthcare-info .btn-primary:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+/* Override any Bootstrap healthcare-specific styles */
+.detailed-healthcare-info .text-primary,
+.detailed-healthcare-info .btn-primary {
+    color: white !important;
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+r
+
+/* More specific selectors to override default link colors */
+.detailed-visa-info a:not(.btn),
+.visa-resources a:not(.btn),
+.card-body a:not(.btn),
+main a:not(.btn) {
+    color: var(--secondary-colorr) !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.detailed-visa-info a:not(.btn):hover,
+.visa-resources a:not(.btn):hover,
+.card-body a:not(.btn):hover,
+main a:not(.btn):hover {
+    color: var(--secondary-color) !important;
+    text-decoration: underline;
+}
+
+.team-members {
+    padding: 20px 0;
+}
+
+.team-card {
+    background: var(--background-white);
+    border: 1px solid rgba(73, 34, 91, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
 }
