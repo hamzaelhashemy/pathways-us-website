@@ -97,28 +97,36 @@ body {
     position: relative;
     z-index: 2;
 }
-.goog-te-banner-frame {
-    display: none !important;
+.goog-te-gadget {
+    font-size: 16px !important;
+    font-family: 'Arial', sans-serif !important;
+    color: #333 !important;
 }
 
 .goog-te-gadget-simple {
-    background-color: #f8f9fa; /* Matches Bootstrap light background */
-    color: #000;
-    border: 1px solid #dee2e6;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 5px !important;
+    padding: 5px 10px !important;
+    cursor: pointer !important;
+    display: inline-block !important;
 }
 
 .goog-te-gadget-simple a {
-    color: #007bff; /* Matches Bootstrap primary color */
-    text-decoration: none;
+    color: #007bff !important;
+    text-decoration: none !important;
 }
 
 .goog-te-gadget-simple a:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
+.goog-te-banner-frame {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+
 
 
 /* Hero Background Images */
