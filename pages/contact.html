@@ -227,61 +227,7 @@
                                 <h3 class="card-title h5">Can you help with urgent matters?</h3>
                                 <p>For urgent matters, our live chat service is available 24/7. You can also reach us through our emergency contact line for immediate support.</p>
                                 <div id="chatbox">
-        <header>Live Chat</header>
-        <div id="chat-messages"></div>
-        <div id="chat-input">
-            <input type="text" id="user-input" placeholder="Type your message here...">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-    </div>
-    <button id="chat-button" onclick="toggleChat()">💬</button>
-
-    <script>
-        function toggleChat() {
-            const chatbox = document.getElementById('chatbox');
-            const chatButton = document.getElementById('chat-button');
-            if (chatbox.style.display === 'none') {
-                chatbox.style.display = 'block';
-                chatButton.style.display = 'none';
-            } else {
-                chatbox.style.display = 'none';
-                chatButton.style.display = 'block';
-            }
-        }
-
-        function sendMessage() {
-            const userInput = document.getElementById('user-input');
-            const chatMessages = document.getElementById('chat-messages');
-
-            const userMessage = userInput.value.trim();
-            if (userMessage === '') return;
-
-            const userBubble = document.createElement('div');
-            userBubble.style.textAlign = 'right';
-            userBubble.textContent = userMessage;
-            chatMessages.appendChild(userBubble);
-
-            const botReply = document.createElement('div');
-            botReply.style.textAlign = 'left';
-            botReply.textContent = "Processing...";
-            chatMessages.appendChild(botReply);
-
-            fetch('/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: userMessage })
-            })
-            .then(response => response.json())
-            .then(data => {
-                botReply.textContent = data.reply;
-            })
-            .catch(error => {
-                botReply.textContent = "Error: Unable to process request.";
-            });
-
-            userInput.value = '';
-        }
-    </script>
+  
                             </div>
                         </div>
                     </div>
