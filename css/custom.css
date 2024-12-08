@@ -207,7 +207,15 @@ footer {
 .resource-item i {
     color: var(--accent-color) !important;
 }
+.language-selector select {
+    min-width: 120px;
+    cursor: pointer;
+}
 
+.language-selector select:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
 /* Media Queries */
 @media (max-width: 991.98px) {
     .hero-section {
